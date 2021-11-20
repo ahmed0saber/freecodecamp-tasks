@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            font-family: sans-serif;
+            outline: none;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #efc3a4;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: #4b1f0e;
+        }
+        header img{
+            width: 40px;
+            margin: 5px;
+            filter: drop-shadow(0 0 3px #0e0504bb);
+        }
+        header span{
+            font-size: 20px;
+            color: #efc3a4;
+            text-shadow: 0px 0px 5px #0e0504;
+        }
+        header nav{
+            position: absolute;
+            right: 4px;
+        }
+        header nav a{
+            color: #efc3a4;
+            padding: 4px;
+            font-size: 15px;
+            text-decoration: none;
+            transition-duration: 0.3s;
+        }
+        header nav a:hover{
+            background-color: #efc3a4;
+            color: #0e0504;
+        }
+        video{
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            margin: 10px auto;
+            border: 8px solid #0e0504;
+            border-radius: 6px;
+        }
+        h1{
+            margin: 20px 10px 10px 10px;
+            color: #0e0504;
+            border-bottom: 4px dashed #0e0504;
+            display: inline-block;
+            padding: 2px;
+            font-size: 30px;
+        }
+        #features{
+            margin-top: 40px;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 20px 5px 20px;
+            border-left: 4px solid #0e0504;
+            border-radius: 8px;
+            display: inline-block;
+            padding: 2px;
+        }
+        h3:hover{
+            border: 4px solid #0e0504;
+            margin: 6px 16px 1px 20px;
+        }
+        #description{
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0px 30px 10px 30px;
+        }
+        .cost{
+            display: inline-block;
+            padding-left: 10px;
+        }
+        form{
+            margin: 0px 20px 30px 20px;
+        }
+        #email{
+            height: 20px;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+        }
+        #submit{
+            height: 30px;
+            border: none;
+            padding: 0px 10px;
+            background-color: #0e0504;
+            color: #efc3a4;
+            font-size: 14px;
+            transition-duration: 0.3s;
+        }
+        #submit:hover{
+            background-color: #fff;
+            color: #0e0504;
+        }
+        @media screen and (max-width: 800px) {
+            body{
+                text-align: center;
+            }
+            header img{
+                width: 34px;
+            }
+            header span{
+                font-size: 18px;
+            }
+            header nav a{
+                padding: 4px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src="coffee.png" alt="https://www.pngnice.com">
+        <span>Coffee4Coding</span>
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#prices" class="nav-link">Prices</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <section id="features">
+        <h1>Features</h1><br>
+        <h3 id="title">Premium Materials</h3>
+        <p id="description">Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        <h3 id="title">Fast Shipping</h3>
+        <p id="description">We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+        <h3 id="title">Quality Assurance</h3>
+        <p id="description">For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+    </section>
+    
+    <video id="video" autoplay muted>
+        <source src="coffee-vid.mp4" type="video/mp4">
+        Video by Maksim Goncharenok from Pexels.
+    </video>
+    
+    <section id="prices">
+        <h1>Prices</h1><br>
+        <h3 id="title">Coffee1 <span class="cost">10.00$</span></h3>
+        <h3 id="title">Coffee2 <span class="cost">20.00$</span></h3>
+        <h3 id="title">Coffee3 <span class="cost">30.00$</span></h3>
+        <h3 id="title">Coffee4 <span class="cost">40.00$</span></h3>
+        <h3 id="title">Coffee5 <span class="cost">50.00$</span></h3>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="submit" id="submit" name="submit" value="Subscribe">
+        </form>
+    </section>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
