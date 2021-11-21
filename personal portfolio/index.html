@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        #navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: #4b1f0e;
+        }
+        #navbar span{
+            font-size: 22px;
+            color: #efc3a4;
+            text-shadow: 0px 0px 5px #0e0504;
+            padding: 10px;
+        }
+        #navbar nav{
+            position: absolute;
+            right: 4px;
+        }
+        #navbar nav a{
+            color: #efc3a4;
+            padding: 4px;
+            font-size: 15px;
+            text-decoration: none;
+            transition-duration: 0.3s;
+        }
+        #navbar nav a:hover{
+            background-color: #efc3a4;
+            color: #0e0504;
+        }
+        #welcome-section{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            background-color: #0e0504;
+            padding: 0px 10px;
+        }
+        #welcome-section h1{
+            font-size: 40px;
+            color: #fff;
+        }
+        p{
+            font-size: 18px;
+            color: #fffb;
+            margin: 10px 0px;
+        }
+        a{
+            text-decoration: none;
+            color: #fffb;
+            font-weight: bold;
+        }
+        #projects{
+            background-color: #022519;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            min-height: 100vh;
+            padding: 0px 10px;
+        }
+        @media screen and (max-width: 800px) {
+            body {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <navbar id="navbar">
+        <span>Personal Portfolio</span>
+        <nav id="nav-bar">
+            <a href="#welcome-section">Home</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </navbar>
+
+
+    <section id="welcome-section">
+        <h1>Welcome to my portfolio !</h1>
+        <p>My name is Ahmed Saber, A Frontend Web Developer.</p>
+        <p>Visit my <a id="profile-link" href="https://github.com/ahmed0saber" target="_blank">GitHub</a></p>
+    </section>
+
+
+    <section id="projects">
+        <h1>My Simple Projects created in this course :-</h1>
+        <section class="project-tile">
+            <p>(1)Tribute Page in which I'm talking about someone great called Ahmed Saber. <a href="https://ahmed0saber.github.io/freecodecamp-tasks/tribute%20page/" target="_blank">View</a></p>
+            <p>(2)Survey Form in which I have used my knowledge about HTML forms. <a href="https://ahmed0saber.github.io/freecodecamp-tasks/survey%20form/" target="_blank">View</a></p>
+            <p>(3)Product Landing Page in which I'm showing why you should buy Coffee. <a href="https://ahmed0saber.github.io/freecodecamp-tasks/product%20landing%20page/" target="_blank">View</a></p>
+            <p>(4)Technical Documentation in which I'm discussing some important basic topics about C#. <a href="https://ahmed0saber.github.io/freecodecamp-tasks/technical%20documentation/" target="_blank">View</a></p>
+        </section>
+    </section>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
