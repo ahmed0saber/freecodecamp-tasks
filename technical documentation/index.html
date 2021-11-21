@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        #navbar{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 150px;
+            height: 100%;
+            background-color: #ddd;
+            z-index: 2;
+        }
+        header{
+            margin: 25px 0px 5px 0px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header:not(#navbar header){
+            border-bottom: 2px solid #000;
+            width: fit-content;
+            padding: 2px;
+        }
+        #navbar header{
+            text-align: center;
+        }
+        #navbar a{
+            display: block;
+            width: calc(100% - 8px);
+            text-decoration: none;
+            text-align: center;
+            padding: 5px 0px;
+            background-color: #eee;
+            color: #000;
+            margin: 4px;
+            font-size: 18px;
+            transition-duration: 0.3s;
+        }
+        #navbar a:hover{
+            background-color: #000;
+            color: #eee;
+        }
+        #main-doc{
+            position: relative;
+            left: 175px;
+            width: calc(100% - 175px);
+            padding: 10px 0px 50px 0px;
+        }
+        p{
+            font-size: 16px;
+            padding: 6px 0px 2px 0px;
+        }
+        ul, ol{
+            padding: 10px 30px;
+            background-color: #eee;
+            width: fit-content;
+        }
+        pre{
+            padding: 6px 10px;
+            background-color: #000;
+            color: #fff;
+            width: fit-content;
+        }
+
+
+        @media screen and (max-width: 800px) {
+            #navbar {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: auto;
+                padding-bottom: 2px;
+            }
+            #navbar header{
+                margin: 0px;
+                padding: 20px 0px 10px 0px;
+            }
+            #main-doc{
+                padding-top: 0px;
+                position: relative;
+                left: 15px;
+                padding: 10px 0px 50px 0px;
+                width: calc(100% - 50px);
+            }
+            pre{
+                max-width: 100%;
+                overflow-x: auto;
+            }
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1ff;
+        }
+        ::-webkit-scrollbar-track:hover {
+            background: #D1D1DD;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #666;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <header>C# Tutorial</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Syntax">Syntax</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Type_Casting">Type Casting</a>
+    </nav>
+
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>C# is a programming language developed by Microsoft.</p>
+            <p>C# is used in many fields , Some of them are:-</p>
+            <ol>
+                <li>Desktop App Development</li>
+                <li>Mobile App Development</li>
+                <li>Game Development</li>
+                <li>Backend Web Development</li>
+            </ol>
+            <p>C# is one of the most popular programming languages , Because:-</p>
+            <ul>
+                <li>It is a programming language developed by Microsoft</li>
+                <li>It is a high-level programming language which is easy to learn</li>
+                <li>It is more secure than many programming languages</li>
+                <li>It is close to C , C++ and Java ... It is easy for programmers to switch to C# or vice versa</li>
+            </ul>
+        </section>
+
+
+        <section class="main-section" id="Syntax">
+            <header>Syntax</header>
+            <p>Syntax is the structure of statements , Here is a simple program typed in C# to discuss the meaning of syntax</p>
+            <pre><code>using System;
+namespace Hello
+{
+    class MyProgram
+    {
+        static void Main(string[] args)
+        {
+            /* That is my first program
+            I created it today*/
+            // Printing text to console and filling the rest of that line
+            Console.WriteLine("Hello World!");
+            // Printing text to console without filling the rest of that line
+            Console.Write("Hello ");
+            Console.WriteLine("Ahmed");
+        }
+    }
+}</code></pre>
+        </section>
+
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>Some data types that are supported by C# :-</p>
+            <ol>
+                <li>integer (int) ... 1 , 500 , -200</li>
+                <li>double (double) ... 0.5 , 3.14 , -2.5</li>
+                <li>string (string) ... "Ahmed" , "What is your name ?"</li>
+                <li>character (char) ... 'A' , '+' , '5'</li>
+                <li>boolean (bool) ... true , false</li>
+            </ol>
+        </section>
+
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>Variables are containers for storing data values.</p>
+            <p>The syntax for declaring a variable and assigning a value to it is as following :</p>
+            <pre><code>data-type variable-name = value(data) ;</code></pre>
+            <p>For example :-</p>
+            <pre><code>int age = 20 ;
+string FirstName = "Ahmed" ;
+string full_name = "Ahmed Saber" ;
+double _degree = 80.5 ;
+char grade = 'A' ;
+bool student = true ;
+bool male = true ;</code></pre>
+        </section>
+
+
+        <section class="main-section" id="Type_Casting">
+            <header>Type Casting</header>
+            <p>Type casting means turning a certain data from a type to another one.</p>
+            <p>Syntax for type casting is :-</p>
+            <pre><code>(data-type) data</code></pre>
+            <p>For example :-</p>
+            <pre><code>double pi = 3.14 ;
+int myInt = (int) pi ;
+Console.WriteLine(pi) ; // 3.14
+Console.WriteLine(myInt) ; // 3</code></pre>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
